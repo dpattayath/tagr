@@ -1,12 +1,49 @@
+## Project
 
-## Setup
+### Technology
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Backend (API) is powered by Laravel ^8 on PHP
+- Frontend (SPA) is powered by React
+- Database: mysql ^8
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Endpoints
+
+#### SPA
+- Merchant: http://localhost:85/merchant
+- Shopper: http://localhost:85/shopper
+#### API - Merchant
+- POST http://localhost:85/api/merchants/products
+- GET http://localhost:85/api/merchants/products
+#### API - Shopper
+- POST http://localhost:85/api/shoppers/product/lookup
+
+### Setup
+
+Clone the repo to a directory and `cd` into it.
+
+#### Install dependencies
+
+```
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v $(pwd):/opt \
+    -w /opt \
+    laravelsail/php80-composer:latest \
+    composer install --ignore-platform-reqs
+```
+#### Pull images and build containers
+
+```
+cp .env.example .env
+./vendor/bin/sail up -d
+```
+
+#### Run migrations & seeders
+```
+./vendor/bin/sail artisan migrate
+```
+
+#### Build Run front-end app
+```
+./vendor/bin/sail npm run dev
+```

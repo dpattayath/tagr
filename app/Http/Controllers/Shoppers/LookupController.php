@@ -20,6 +20,11 @@ class LookupController extends Controller
         $this->service = $service;
     }
 
+    /**
+     * Action to handle product look up for shoppers
+     * @param ProductLookupRequest $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+     */
     public function product(ProductLookupRequest $request)
     {
         try {

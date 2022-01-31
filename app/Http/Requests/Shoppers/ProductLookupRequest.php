@@ -24,7 +24,7 @@ class ProductLookupRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'sku' => 'required'
         ];
     }
 }
