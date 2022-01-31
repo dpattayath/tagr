@@ -1,55 +1,52 @@
 
 .merchant {
     font-family: Gilmer-Light;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    .main {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .btn-default {
+        width: 120px;
+        font-family: 'Gilmer-Medium';
+    }
 
-        .btn-default {
-            width: 120px;
-            font-family: 'Gilmer-Medium';
-        }
+    .currency {
+        border: 1px solid #ccc;
+        border-right: none;
+        padding: 6px 8px;
+        font-family: 'Gilmer-Medium';
+    }
 
-        .currency {
-            border: 1px solid #ccc;
-            border-right: none;
-            padding: 6px 8px;
-            font-family: 'Gilmer-Medium';
-        }
+    label {
+        font-family: Gilmer-Bold;
+    }
 
-        label {
-            font-family: Gilmer-Bold;
-        }
+    .btn-add {
+        width: 40px;
+        height: 40px;
+        content: "+";
+        text-align: center;
+        border-radius: 5px;
+        background-color: #1a9fdf;
+        color: white;
+        border: 1px solid #1a9fdf;
+        font-size: 22px;
+        font-family: 'Gilmer-Bold';
+    }
 
-        .btn-add {
-            width: 40px;
-            height: 40px;
-            content: "+";
-            text-align: center;
-            border-radius: 5px;
-            background-color: #1a9fdf;
-            color: white;
-            border: 1px solid #1a9fdf;
-            font-size: 22px;
-            font-family: 'Gilmer-Bold';
-        }
+    .lbl-add {
+        font-size: 22px;
+        padding-left: 18px;
+        font-weight: bold;
+        font-family: 'Gilmer-Bold';
+    }
 
-        .lbl-add {
-            font-size: 22px;
-            padding-left: 18px;
-            font-weight: bold;
-            font-family: 'Gilmer-Bold';
-        }
-
-        .drag-drop {
-            border: 2px dashed #e9e9e9;
-            padding: 40px;
-            font-size: 11px;
-            color: #ccc;
-        }
+    .drag-drop {
+        border: 2px dashed #e9e9e9;
+        padding: 40px;
+        font-size: 11px;
+        color: #ccc;
     }
 }

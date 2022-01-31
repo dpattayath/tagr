@@ -25,6 +25,8 @@
         "sass-loader": "^11.0.1"
     },
     "dependencies": {
-        "react-device-detect": "^2.1.2"
+        "react-device-detect": "^2.1.2",
+        "scandit-sdk": "^5.9.3",
+        "scandit-sdk-react": "^4.0.2"
     }
 }
